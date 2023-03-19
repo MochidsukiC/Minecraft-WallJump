@@ -33,6 +33,7 @@ public class WallJump implements Listener {
         Player player = event.getPlayer();
         if (player.getGameMode() != GameMode.CREATIVE) {
             event.setCancelled(true);
+            event.getPlayer().setAllowFlight(false);
 
             Block wxblock = player.getWorld().getBlockAt(player.getLocation().subtract(1.05, 0, 0));
             Block nxblock = player.getWorld().getBlockAt(player.getLocation().subtract(0, 0, 1.05));
